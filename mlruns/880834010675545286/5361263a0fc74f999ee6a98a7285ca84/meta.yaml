@@ -1,0 +1,15 @@
+artifact_uri: /Users/summenzahid/Desktop/semester2/IntelligenceEngandInfrastructure/CW2/cicd-mlops-project/mlruns/880834010675545286/5361263a0fc74f999ee6a98a7285ca84/artifacts
+end_time: 1765052314520
+entry_point_name: ''
+experiment_id: '880834010675545286'
+lifecycle_stage: active
+run_id: 5361263a0fc74f999ee6a98a7285ca84
+run_name: gradient_boosting
+run_uuid: 5361263a0fc74f999ee6a98a7285ca84
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1765052311756
+status: 3
+tags: []
+user_id: summenzahid

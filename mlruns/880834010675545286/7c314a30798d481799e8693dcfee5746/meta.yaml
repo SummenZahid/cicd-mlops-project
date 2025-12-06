@@ -1,0 +1,15 @@
+artifact_uri: /Users/summenzahid/Desktop/semester2/IntelligenceEngandInfrastructure/CW2/cicd-mlops-project/mlruns/880834010675545286/7c314a30798d481799e8693dcfee5746/artifacts
+end_time: 1765053035506
+entry_point_name: ''
+experiment_id: '880834010675545286'
+lifecycle_stage: active
+run_id: 7c314a30798d481799e8693dcfee5746
+run_name: random_forest
+run_uuid: 7c314a30798d481799e8693dcfee5746
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1765053031972
+status: 3
+tags: []
+user_id: summenzahid

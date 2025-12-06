@@ -1,0 +1,15 @@
+artifact_uri: /Users/summenzahid/Desktop/semester2/IntelligenceEngandInfrastructure/CW2/cicd-mlops-project/mlruns/880834010675545286/aa5f85d6d8f043baa662f05e3b88e497/artifacts
+end_time: 1765052917619
+entry_point_name: ''
+experiment_id: '880834010675545286'
+lifecycle_stage: active
+run_id: aa5f85d6d8f043baa662f05e3b88e497
+run_name: xgboost
+run_uuid: aa5f85d6d8f043baa662f05e3b88e497
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1765052915674
+status: 3
+tags: []
+user_id: summenzahid
