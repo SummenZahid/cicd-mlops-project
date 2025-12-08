@@ -39,6 +39,10 @@ jobs:
 
       - name: Build and push image
         run: |
-          IMAGE_NAME=ghcr.io/${{ github.repository }}/cicd-api:latest
+          REPO_LOWER=$(echo "${{ github.repository }}" | tr '[:upper:]' '[:lower:]')
+          IMAGE_NAME=ghcr.io/$REPO_LOWER/cicd-api:latest
+          
+          echo "Building image: $IMAGE_NAME"
+          
           docker build -t $IMAGE_NAME -f deployments/Dockerfile .
           docker push $IMAGE_NAME
