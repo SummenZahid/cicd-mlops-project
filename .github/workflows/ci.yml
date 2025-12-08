@@ -5,6 +5,7 @@ on:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
+  workflow_dispatch:       # allow manual runs from Actions tab
 
 jobs:
   build-test:
@@ -65,7 +66,7 @@ jobs:
         run: |
           # repo formatted like: owner/repo
           REPO_LOWER=$(echo "${{ github.repository }}" | tr '[:upper:]' '[:lower:]')
-          # simplest: ghcr.io/owner/repo:latest
+          # image: ghcr.io/owner/repo:latest
           IMAGE_NAME=ghcr.io/$REPO_LOWER:latest
 
           echo "Building image: $IMAGE_NAME"
@@ -81,3 +82,16 @@ jobs:
           fi
 
           docker push $IMAGE_NAME
+
+  deploy-azure:
+    needs: docker-build-push
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+
+    steps:
+      - name: Deploy container to Azure Web App
+        uses: azure/webapps-deploy@v2
+        with:
+          app-name: mlosp-b00996747
+          publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
+          images: ghcr.io/${{ github.repository }}:latest
